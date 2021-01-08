@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> {% block title %}covidAi{% endblock %} </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link href=" {{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/icofont/icofont.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/owl.carousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/venobox/venobox.css') }} " rel="stylesheet">
+    <link href=" {{ url_for( 'static', filename='vendor/aos/aos.css') }} " rel="stylesheet">
+
+    <link href=" {{ url_for( 'static', filename='style.css' ) }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero"
+        style="display: table; width: 100%; height: 100vh;  background: url(static/img/covid.jpg) top center; background-size: cover;">
+        <div class="hero-container">
+            <div class="wow fadeIn">
+                <div class="hero-logo">
+                    <img class="" src=" {{ url_for('static', filename='img/covidAi_logo.png') }}" alt="covidai">
+                </div>
+
+                <h1>Welcome to covidAi</h1>
+                <h2>We classify covid from <span class="typed" data-typed-items="xrays"></span></h2>
+                <div class="actions">
+                    <a href="/get_data" type="button" class="btn-get-started">classify covid</a>
+                </div>
+            </div>
+    </section><!-- End Hero -->
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container d-flex align-items-center">
+
+            <a href="/" class="logo mr-auto"><img src=" {{ url_for('static', filename='img/covidAi_logo.png') }}" alt=""></a>
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#hero">Home</a></li>
+                    <li><a href="#symptoms">Symptoms</a></li>
+                    <li><a href="#treatments">Treatments</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+        <br>
+        <br>
+        <br>
+        <!-- ======= Symptoms Section ====== -->
+        <section id='symptoms'>
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-title">Symptoms</h3>
+                        <div class="section-title-divider"></div>
+                        <br>
+                        <p class="section-description">
+                            COVID-19 affects different people in different ways.
+                            Most infected people will develop mild to moderate illness and recover without
+                            hospitalization
+                        </p>
+                        <ul>
+                            <li>Most Common Symptoms</li>
+                            <ul>
+                                <li>Fever</li>
+                                <li>Dry Cough</li>
+                                <li>Tiredness</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>Less Common Symptoms</li>
+                            <ul>
+                                <li>Aches and Pain</li>
+                                <li>Sore Throat</li>
+                                <li>Diarrhoea</li>
+                                <li>conjunctivitis</li>
+                                <li>Headache</li>
+                                <li>Loss of Taste or Smell</li>
+                                <li>A Rash on Skin, or Discolouration of Fingers or Toes</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>Serious Symptoms</li>
+                            <ul>
+                                <li>Difficulty Breathing or Shortness of Breath</li>
+                                <li>Chest Pain or Pressure</li>
+                                <li>Loss of Speech or Movement</li>
+                            </ul>
+                        </ul>
+
+                        <p class="section-description">Seek immediate medical attention if you have serious symptoms.
+                            Always call
+                            before visiting your doctor or health facility.
+                            People with mild symptoms who are otherwise healthy should manage their symptoms at home.
+                            On average it takes 5–6 days from when someone is infected with the virus for symptoms to
+                            show, however it
+                            can take up to 14 days.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======= Symptoms Section ====== -->
+        <br>
+        <br>
+        <br>
+        <!-- ======= Symptoms Section ====== -->
+        <section id='treatments'>
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-title">Treatments</h3>
+                        <div class="section-title-divider"></div>
+                        <br>
+                        <p class="section-description">
+                            To date, there are no specific vaccines or medicines for COVID-19.
+                            Treatments are under investigation, and will be tested through clinical trials. World Health
+                            Organization
+                        </p>
+
+                        <ul>
+                            <li>If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay
+                                in a separate
+                                room from other family members,
+                                and use a dedicated bathroom if possible. Clean and disinfect frequently touched
+                                surfaces.</li>
+
+                            <li>Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay
+                                active, and
+                                make social contact with loved ones
+                                through the phone or internet. Children need extra love and attention from adults during
+                                difficult
+                                times. Keep to regular routines and
+                                schedules as much as possible.</li>
+
+                            <li>It is normal to feel sad, stressed, or confused during a crisis. Talking to people you
+                                trust, such as
+                                friends and family, can help.
+                                If you feel overwhelmed, talk to a health worker or counsellor.</li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======= treatment Section ====== -->
+
+        <!-- ======= About Section ======= -->
+        <section id="about">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-title">About Us</h3>
+                        <div class="section-title-divider"></div>
+                        <br>
+                        <p class="section-description">
+                            Our vision is to provide an accessible web interface for anyone to interact with our covidAi
+                            digital lab
+                            projects in medical imaging.
+                            covidAi supports multiple tasks such as X-ray, CT-scans, MRI's and histopathology slide
+                            analysis.
+                            Our platform analyzes your uploaded images and provides a probabilistic interpretation for
+                            medical
+                            conditions.
+                            You can also “teach” our AI agents by providing labeled images or providing feedback about
+                            reported
+                            interpretations.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section><!-- End About Section -->
+
+
+
+
+
+        <!-- ======= Team Section ======= -->
+        <section id="team">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="section-title">Our Team</h3>
+                        <div class="section-title-divider"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="member">
+                            <div class="pic"><img src=" {{ url_for('static', filename='img/team/drAli.jpg') }}" alt=""></div>
+                            <h4>Dr.Ali Arshad</h4>
+                            <span>HOD</span>
+                            <span>supervisor</span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="member">
+                            <div class="pic"><img src=" {{ url_for('static', filename='img/team/sirFarrukh.jpg') }}" alt=""></div>
+                            <h4>Farrukh Bashir</h4>
+                            <span>LECTURER</span>
+                            <span>cosupervisor</span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="member">
+                            <div class="pic"><img src=" {{ url_for('static', filename='img/team/zain.jpg') }}" alt=""></div>
+                            <h4>Zain UL Arfeen</h4>
+                            <span>student</span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="member">
+                            <div class="pic"><img src=" {{ url_for('static', filename='img/team/hmzi.jpg') }}" alt=""></div>
+                            <h4>Hamza Shafi</h4>
+                            <span>student</span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Team Section -->
+
+
+
+
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; copyright <strong>covidAi</strong>. All Rights Reserved
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"
+        style="position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #fff url(static/img/viruspreloader.gif) no-repeat center center;">
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src=" {{ url_for( 'static', filename='vendor/jquery/jquery.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/jquery.easing/jquery.easing.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/php-email-form/validate.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/jquery-sticky/jquery.sticky.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/owl.carousel/owl.carousel.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/venobox/venobox.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/typed.js/typed.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/aos/aos.js') }} "></script>
+
+    <!-- Template Main JS File -->
+    <script src=" {{ url_for( 'static', filename='main.js' ) }} "></script>
+
+</body>
+
+</html>

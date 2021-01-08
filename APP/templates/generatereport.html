@@ -1,0 +1,87 @@
+{% extends "public/public_temp.html" %}
+
+{% block title %}Report{% endblock %}
+
+{% block header%}
+<div class="container d-flex align-items-center">
+
+    <a href="/" class="logo mr-auto"><img src=" {{ url_for('static', filename='img/covidAi_logo.png') }}"
+            alt=""></a>
+    <!-- Uncomment below if you prefer to use a text logo -->
+    <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+
+    <nav class="nav-menu d-none d-lg-block">
+        <ul>
+            <li class=""><a href="/">Home</a></li>
+        </ul>
+    </nav><!-- .nav-menu -->
+
+</div>
+
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5" style="margin-top: 50px">
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid text-center" style="padding-top: 10px; padding-bottom: 5px;">
+            <div class="justify-content-center">
+                <div>
+                    <a href="/" class="logo mx-auto"><img
+                            src=" {{ url_for('static', filename='img/covidAi_logoBlack.png') }} " alt=""
+                            style="width: 200px;"></a>
+                    <h4 class="mt-2" style="font-size: 1.4rem;">AI Based x-ray Analysis of Human Lungs</h4>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mr-auto">
+                            <h6 style="font-size: 1.2rem;">Name : <span style="font-size: smaller; font: weight 400;">{{username["name"]}}</span> </h6>
+                        </div>
+                        <div class="col-md-4 mr-auto">
+                            <h6 style="font-size: 1.2rem;">Age : <span style="font-size: smaller; font: weight 500;">{{username['age']}}</span> </h6>
+                        </div>
+                        <div class="col-md-4 mr-auto">
+                            <h6 style="font-size: 1.2rem;">Gender : <span style="font-size: smaller; font: weight 400;">{{username['gender']}}</span> </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mr-auto" >
+                            <h6 style="font-size: 1.2rem;">Result : <span style="font-size: smaller; font-weight: bold;">{{username['result']}}</span> </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-5">
+                <div class="row">
+                    <div class="col">
+                        <p>This is a computer generated report and its in testing mode, if your result gets positive consult 
+                            your doctor immidiately
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+
+
+{% block footer %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="copyright">
+                &copy; copyright <strong>covidAi</strong>. All Rights Reserved
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

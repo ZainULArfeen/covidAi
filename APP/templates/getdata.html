@@ -1,0 +1,118 @@
+{% extends "public/public_temp.html"%}
+
+{% block title %}Data{% endblock %}
+
+{% block header%}
+<div class="container d-flex align-items-center">
+
+    <a href="/" class="logo mr-auto"><img src=" {{ url_for('static', filename='img/covidAi_logo.png') }}"
+            alt=""></a>
+    <!-- Uncomment below if you prefer to use a text logo -->
+    <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+
+    <nav class="nav-menu d-none d-lg-block">
+        <ul>
+            <li class=""><a href="/">Home</a></li>
+        </ul>
+    </nav><!-- .nav-menu -->
+
+</div>
+
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5 justify-content-center">
+    <div class="row">
+        <div class="col md-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    SARS-COV-2
+                </div>
+                <div class="card-body">
+                    <form action="/get_data" method="POST" , enctype="multipart/form-data">
+                        <div class="form-group row mb-3">
+                            <div class="form-group row mb-3">
+                                <label class="col-sm-2 col-form-label" for="">Name</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" name="name" id=""
+                                        placeholder="Enter Your Name">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="form-group row mb-3">
+                                <label class="col-sm-2 col-form-label" for="">Age</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="number" name="age" id=""
+                                        placeholder="Enter Your Age">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <div class="form-group row mb-3">
+                                <span class="col-sm-2 col-form-label" for="">Gender</span>
+                                <div class="col-sm-3 mr-auto" style="padding-top: 6px; padding-bottom: 6px;">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
+                                            value="Male">
+                                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
+                                            value="Female">
+                                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row mb-3">
+                            <label class="col-sm-2 col-form-label" for="">X-ray Image</label>
+                            <div class="custom-file col-sm-7">
+
+                                <input type="file" class="form-control" name="image" id="image">
+
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-outline-secondary" type="submit"
+                                    >upload</button>
+                            </div>
+                        </div>
+
+
+
+                        <a class="btn btn-primary mt-5" href="/generate_report" type="submit" role="button">Generate
+                            Report</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="copyright">
+                &copy; copyright <strong>covidAi</strong>. All Rights Reserved
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

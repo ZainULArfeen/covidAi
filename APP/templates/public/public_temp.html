@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> {% block title %} {% endblock %} </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link href=" {{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/icofont/icofont.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/owl.carousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
+    <link href=" {{ url_for('static', filename='vendor/venobox/venobox.css') }} " rel="stylesheet">
+    <link href=" {{ url_for( 'static', filename='vendor/aos/aos.css') }} " rel="stylesheet">
+
+    <link href=" {{ url_for( 'static', filename='style.css' ) }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="header">
+        {% block header %}{% endblock %}
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer id="footer" style="position: absolute; bottom: 0; width: 100%;">
+        {% block footer %} {% endblock %}
+    </footer>
+
+    <div id="preloader"
+        style="position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #fff url(static/img/viruspreloader.gif) no-repeat center center;">
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src=" {{ url_for( 'static', filename='vendor/jquery/jquery.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/jquery.easing/jquery.easing.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/php-email-form/validate.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/jquery-sticky/jquery.sticky.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/owl.carousel/owl.carousel.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/venobox/venobox.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/typed.js/typed.min.js') }} "></script>
+    <script src=" {{ url_for( 'static', filename='vendor/aos/aos.js') }} "></script>
+
+    <!-- Template Main JS File -->
+    <script src=" {{ url_for( 'static', filename='main.js' ) }} "></script>
+
+</body>
+
+</html>
